@@ -91,6 +91,10 @@ footer p{
     margin-bottom:300px;
 }
 
+.hero-para p {
+    font-family: 'Playfair Display', serif;
+}
+
 .hero h1 {
     margin-top: 100px;
 }
