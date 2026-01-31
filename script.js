@@ -9,6 +9,14 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
 
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+
 // Countdown timer
 const weddingDate = new Date("Februry 28, 2026 16:00:00").getTime();
 const timer = document.getElementById("timer");
