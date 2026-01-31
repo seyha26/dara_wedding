@@ -1,4 +1,3 @@
-// Scroll reveal animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -16,8 +15,6 @@ menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-
-// Countdown timer
 const weddingDate = new Date("Februry 28, 2026 16:00:00").getTime();
 const timer = document.getElementById("timer");
 
@@ -33,7 +30,6 @@ setInterval(() => {
     timer.innerHTML = `${days} ថ្ងៃ ${hours} ម៉ោង ${minutes} នាទី ${seconds} វិនាទី`;
 }, 1000);
 
-// Floating hearts
 setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -45,3 +41,13 @@ setInterval(() => {
 
     setTimeout(() => heart.remove(), 6000);
 }, 500);
+
+
+function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}

@@ -42,6 +42,11 @@ header {
     color: #c26b6b;
     font-family: 'Playfair Display', serif;
 }
+
+.gold {
+    color: #FEBA17;
+}
+
 footer p{
     font-family: 'Playfair Display', serif;
 }
@@ -70,21 +75,59 @@ footer p{
     padding-top: 80px;
     background:
         linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
-        url("https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg")
+        url("./images/8.JPG")
         center/cover;
     color: white;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    position: relative;
+    /* justify-content: center; */
 }
 
 .hero h2 {
     font-size: 60px;
+    margin-bottom:300px;
 }
 
-.hero p {
+.hero h1 {
+    margin-top: 100px;
+}
+
+.hero .hero-para {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Playfair Display', serif;
     font-size: 18px;
+    text-align: center;
+}
+
+
+.khmer-date {
+    font-family: "Moulpali", sans-serif !important;
+    font-size: 1.4rem;
+}
+
+.invitation {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.invitation h1 {
+    color: #FEBA17;
+    font-size: 2rem;
+}
+
+.invitation img {
+    width: 100px;
+}
+
+.invitation p{
+    font-family: "Moulpali", sans-serif;
+    font-size: 1.2rem;
 }
 
 /* SECTIONS */
@@ -95,7 +138,12 @@ section {
 
 .countdown h3, #timer, .moul{
     font-size: 24px;
-    color: #c26b6b;
+    color: #FEBA17;
+    
+}
+
+#timer {
+    font-family: "Moulpali", sans-serif !important;
 }
 
 .couple .couple-container{
@@ -110,14 +158,17 @@ section {
     margin-bottom: 20px;
 }
 
+.couple h4 {
+    margin-top: 20px;
+}
+
 .card {
-    background: white;
-    color: #c26b6b;
+    color:  #0C2C55;
     width: 460px;
     height: 600px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    /* box-shadow: 0 15px 30px rgba(0,0,0,.1); */
     transition: transform .4s;
 }
 
@@ -126,7 +177,7 @@ section {
 }
 
 .card h4, .moul {
-    color: #c26b6b;
+    color: #FEBA17;
     font-size: 20px;
     font-family: 'Moul', sans-serif;
 }
@@ -136,10 +187,13 @@ section {
 }
 
 .card img {
-    width: 100%;
+    /* width: 100%; */
     height: 480px;
     object-fit: cover;
     border-radius: 15px;
+    object-fit: cover;      /* prevents stretching */
+    border-radius: 50%;     /* circle portrait (wedding style) */
+    image-rendering: auto; 
 }
 
 .families {
@@ -150,44 +204,12 @@ section {
     align-items: center;
 }
 
-.parents {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.parents h1 {
-    font-size: 26px;
-}
-
-.name {
-    font-family: 'Moul', sans-serif;
-    font-size: 20px;
-}
-.family-container {
-    flex: 1;
-    min-width: 400px;
-}
-
-.parents .family {
-    line-height: 3;
-    background: white;
-    width: 100%;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.1);
-    flex: 1;
-}
-
-.family-container {
-    width: 100%;
-    color: #c26b6b;
-}
-
 .details p {
-    max-width: 700px;
+    max-width: 800px;
     margin: 15px auto;
     line-height: 1.7;
+    font-family: "Moulpali", sans-serif;
+    color:  #0C2C55;
 }
 
 /* FOOTER */
@@ -217,6 +239,74 @@ footer {
     animation: floatUp 6s linear forwards;
 }
 
+.wedding-gallery {
+  padding: 80px 20px;
+  background: #faf7f5;
+  text-align: center;
+}
+
+.wedding-gallery h2 {
+  font-size: 36px;
+  font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 16px;
+  animation: zoomIn 0.4s ease;
+}
+
+#lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 .map {
     max-width: 1000px;
     margin: auto;
@@ -235,13 +325,30 @@ footer {
     margin-bottom: 10px;
 }
 
-.map .container .map-container, .qr-code-location {
+.map .container .qr-code-location {
     flex: 1;
     min-width: 200px;
+    align-items: center;
+    margin: auto;
+}
+
+.qr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.2rem;
+    margin-top: 20px;
 }
 
 .map .container .qr-code-location img {
     width: 100%;
+}
+
+.qr-code {
+  width: 140px;      /* adjust here */
+  height: auto;      /* keep ratio */
+  max-width: 100%;
 }
 
 /* .map .container div {
@@ -301,5 +408,14 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+
+    .hero h2 {
+        font-size: 60px;
+        margin-top: 100px;
+    }
+
+    .hero h1 {
+        display: none;
     }
 }

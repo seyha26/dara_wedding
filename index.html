@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Moulpali&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 
     <header>
         <nav class="navbar">
-            <h2 class="love">Chandara & Kimchou</h2>
+            <h2 class="love gold">Chandara & Kimchou</h2>
 
             <div class="menu-toggle" id="menu-toggle">☰</div>
 
@@ -36,90 +37,107 @@
         <div id="heart-container"></div>
         <h1>ការអញ្ជើញអាពាហ៍ពិពាហ៍</h1>
         <h2>ដួង ច័ន្ទដារ៉ា <span class="love">&</span> ប៉ាន់ គឹមជូ</h2>
-        <p>We are getting married</p>
+
+        <div class="hero-para">
+            <p>Save The Date</p>
+            <p class="khmer-date">ថ្ងៃ សៅរ៍ ទី ២៨ ខែកុម្ភៈ ឆ្នាំ២០២៦ <br>ម៉ោង ៥ៈ០០ ល្ងាច</p>
+            <p>28.02.2026|5:00PM</p>
+        </div>
     </section>
 
     <!-- COUNTDOWN -->
+    <section class="invitation">
+        <h1 class="moul">យើងខ្ញុំមានកិត្តិយស<br><span class="moul"
+                style="color: #FEBA17; font-size: 1.6rem;">សូមគោរពអញ្ជើញ</span></h1>
+        <img src="./images/hr.png" alt="">
+        <p style="color: #0C2C55;">ឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាង កញ្ញា និង ប្រិយមិត្ត
+            អញ្ជើញចូលរួមជាអធិបតី និង ជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធពរជ័យសិរីសួស្តី ជ័យ មង្គលក្នុង ពិធីរៀបអាពាហ៍ពិពាហ៍
+            កូនប្រុស-ស្រី របស់យើងខ្ញុំ</p>
+    </section>
     <section class="countdown hidden">
-        <h3 class="moul">ជិតដល់ថ្ងៃពិសេសហើយ!</h3>
+        <h3 class="moul gold">យើងខ្ញុំកំពុងរងចាំថ្ងៃពិសេស</h3>
         <div id="timer"></div>
     </section>
 
     <!-- COUPLE -->
 
+    <section class="wedding-gallery">
+        <h3 class="gold"
+            style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
+            កំរងរូបភាពអាពាហ៍ពិពាហ៍របស់យើង</h3>
+
+        <div class="gallery-grid">
+            <img src="images/30.JPG" onclick="openLightbox(this)">
+            <img src="images/2.JPG" onclick="openLightbox(this)">
+            <img src="images/3.JPG" onclick="openLightbox(this)">
+            <img src="images/4.JPG" onclick="openLightbox(this)">
+            <img src="images/5.JPG" onclick="openLightbox(this)">
+            <img src="images/6.JPG" onclick="openLightbox(this)">
+            <img src="images/7.JPG" onclick="openLightbox(this)">
+            <img src="images/20.JPG" onclick="openLightbox(this)">
+            <img src="images/9.JPG" onclick="openLightbox(this)">
+            <img src="images/10.JPG" onclick="openLightbox(this)">
+            <img src="images/11.JPG" onclick="openLightbox(this)">
+            <img src="images/12.JPG" onclick="openLightbox(this)">
+            <img src="images/13.JPG" onclick="openLightbox(this)">
+            <img src="images/14.JPG" onclick="openLightbox(this)">
+            <img src="images/15.JPG" onclick="openLightbox(this)">
+            <img src="images/16.JPG" onclick="openLightbox(this)">
+            <img src="images/24.JPG" onclick="openLightbox(this)">
+            <img src="images/18.JPG" onclick="openLightbox(this)">
+            <img src="images/19.JPG" onclick="openLightbox(this)">
+            <img src="images/20.JPG" onclick="openLightbox(this)">
+            <!-- <img src="images/photo6.jpg" onclick="openLightbox(this)"> -->
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
     <section class="couple hidden" id="couple">
-        <h1>កូនកំលោះ និង កូនក្រមុំ</h1>
+        <h1 class="moul" style="font-size: 1.6rem;">កូនកំលោះ និង កូនក្រមុំ</h1>
         <div class="couple-container">
             <div class="card">
-                <img src="https://images.pexels.com/photos/4046314/pexels-photo-4046314.jpeg">
-                <h4>ដួង ច័ន្ទដារ៉ា</h4>    
-                <p>កូនកូនកំលោះ</p>
+                <img src="./images/male2.JPG">
+                <h4>ដួង ច័ន្ទដារ៉ា</h4>
+                <p style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
+                    កូនកូនកំលោះ</p>
             </div>
             <div class="heart-card">
                 <img src="./images/heart1.gif" alt="">
             </div>
             <div class="card">
-                <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg">
+                <img src="./images/female2.JPG">
                 <h4>ប៉ាន់ គឹមជូ</h4>
-                <p>កូនក្រមុំ</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PARENTS -->
-    <section class="parents hidden" id="parents">
-        <h1 class="moul">សិរីសួស្តីក្នុងគ្រួសារ</h1>
-
-        <div class="families">
-            <div class="family-container">
-                <h4>ក្រុមគ្រួសាររបស់កូនកូនកំលោះ</h4>
-                <div class="family">
-                    <p>ឪពុកឈ្មោះ <strong class="name">ដួង កែវ</strong></p>
-                    <p>ម្តាយឈ្មោះ <strong class="name">ម៉ៅ វណ្ណី</strong></p>
-                    <p>កូនប្រុសឈ្មោះ <strong class="name">ដួង ច័ន្ទដារ៉ា</strong></p>
-                </div>
-            </div>
-            <div class="family-container">
-                <h4>ក្រុមគ្រួសាររបស់កូនក្រមុំ</h4>
-                <div class="family">
-                    <p>ឪពុកឈ្មោះ <strong class="name">ប៉ាន់ ដៀប</strong></p>
-                    <p>ម្តាយឈ្មោះ <strong class="name">កៅ ដានី</strong></p>
-                    <p>កូនស្រីឈ្មោះ <strong class="name">ប៉ាន់ គឹមជូ</strong></p>
-                </div>
+                <p style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
+                    កូនក្រមុំ</p>
             </div>
         </div>
     </section>
 
     <!-- DETAILS -->
     <section class="details hidden" id="details">
-        <h3 class="moul">ព័ត៍មានលម្អិត</h3>
+        <h3 class="moul">មានកិត្តិយសសូមគោរពអញ្ជើញ</h3>
 
         <p>
-            ថ្ងៃសៅរ៍ ១២កើត ខែផល្គុន ឆ្នាំម្សាញ់ សប្តស័ក ពុទ្ធសករាជ ២៥៦៩<br>
-            ត្រូវនឹងថ្ងៃទី ២៨ ខែកុម្ភៈ ឆ្នាំ២០២៦
-        </p>
+            ឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាង កញ្ញា និង ប្រិយមិត្ត អញ្ជើញចូលរួមជាអធិបតី និង ជាភ្ញៀវកិត្តិយស
+            ដើម្បីប្រសិទ្ធពរជ័យសិរីសួស្តី ជ័យ មង្គលក្នុង ពិធីរៀបអាពាហ៍ពិពាហ៍ កូនប្រុស-ស្រី របស់យើងខ្ញុំ <br><br>
 
-        <p>⏰ ម៉ោង ៦:០០ ល្ងាច</p>
-
-        <p>
-            📍 នៅគេហដ្ឋានខាងស្រី <br> ភូមិកែវក្រសាំង សង្កាត់កែប ខណ្ឌកែប ខេត្តកែប (ចូលតាមផ្លូវសាលាបឋមសិក្សាកែវក្រសួង
-            ចំងាយ ៥០០ម៉ែត្រ)
+            ពិសាភោជនាហារប្រព្រឹត្តនៅ ថ្ងៃសៅរ៍ ១២កើត ខែផល្គុន ឆ្នាំម្សាញ់ សប្តស័ក ពុទ្ធសករាជ ២៥៦៩ ត្រូវនឹងថ្ងៃទី២៨
+            ខែកុម្ភៈ ឆ្នាំ២០២៦នៅគេហដ្ឋានខាងស្រី ភូមិកែវក្រសាំង សង្កាត់កែប ខណ្ឌកែប ខេត្តកែប
+            (ចូលតាមផ្លូវសាលាបឋមសិក្សាកែវក្រសួង ចំងាយ 500m)
         </p>
     </section>
 
     <section class="map hidden">
         <h3 class="moul" style="text-align: center;">ទីតាំង</h3>
-        <div class="container">
-            <div class="map-container">
-                <h4>Google Map</h4>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3922.7869855948825!2d104.325276!3d10.517437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDMxJzAyLjgiTiAxMDTCsDE5JzMxLjAiRQ!5e0!3m2!1sen!2skh!4v1769858472649!5m2!1sen!2skh"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="qr-code-location">
-                <h4>ស្កេន QR Code ដើម្បីមើលទីតាំង</h4>
-                <img src="images/location.png" alt="QR Code Location">
+        <div class="qr-code-location">
+            <h4>ស្កេន QR Code ដើម្បីមើលទីតាំង</h4>
+            <div class="qr">
+                <img src="images/location.png" class="qr-code" alt="QR Code Location">
+                <a href="https://maps.app.goo.gl/Hs1tA7cowWSPE6BP9">ចុចដើម្បីទៅកាន់ទីតាំងកម្មវិធី</a>
             </div>
         </div>
 
