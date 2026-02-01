@@ -11,20 +11,21 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Moulpali&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+        integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
 </head>
 
 <body>
-
-
     <header>
         <nav class="navbar">
             <h2 class="love gold">Chandara & Kimchou</h2>
-
-            <div class="menu-toggle" id="menu-toggle">☰</div>
-
+            <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#hero">ទំព័រដើម</a></li>
-                <li><a href="#galarry">កំរងរូបភាព</a></li>
+                <li><a href="/">ទំព័រដើម</a></li>
+                <li><a href="/gallery.html">កំរងរូបភាព</a></li>
             </ul>
         </nav>
     </header>
@@ -35,10 +36,9 @@
         <div id="heart-container"></div>
         <h1>ការអញ្ជើញអាពាហ៍ពិពាហ៍</h1>
         <h2>ដួង ច័ន្ទដារ៉ា <span class="love">&</span> ប៉ាន់ គឹមជូ</h2>
-
         <div class="hero-para">
             <p>Save The Date</p>
-            <p class="khmer-date">ថ្ងៃ សៅរ៍ ទី ២៨ ខែកុម្ភៈ ឆ្នាំ២០២៦ <br>ម៉ោង ៥ៈ០០ ល្ងាច</p>
+            <p class="khmer-date">ថ្ងៃ សៅរ៍ ទី ២៨ ខែកុម្ភៈ ឆ្នាំ២០២៦ <br>ម៉ោង ៥:០០ ល្ងាច</p>
             <p>28.02.2026|5:00PM</p>
         </div>
     </section>
@@ -59,35 +59,24 @@
 
     <!-- COUPLE -->
 
-    <section class="wedding-gallery" id="galarry">
+    <section class="wedding-gallery fade-section">
         <h3 class="gold"
             style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
             កំរងរូបភាពអាពាហ៍ពិពាហ៍របស់យើង</h3>
 
-        <div class="gallery-grid">
-            <img src="images/30.JPG" onclick="openLightbox(this)">
-            <img src="images/2.JPG" onclick="openLightbox(this)">
-            <img src="images/3.JPG" onclick="openLightbox(this)">
-            <img src="images/4.JPG" onclick="openLightbox(this)">
-            <img src="images/5.JPG" onclick="openLightbox(this)">
-            <img src="images/6.JPG" onclick="openLightbox(this)">
-            <img src="images/7.JPG" onclick="openLightbox(this)">
-            <img src="images/20.JPG" onclick="openLightbox(this)">
-            <img src="images/9.JPG" onclick="openLightbox(this)">
-            <img src="images/10.JPG" onclick="openLightbox(this)">
-            <img src="images/11.JPG" onclick="openLightbox(this)">
-            <img src="images/12.JPG" onclick="openLightbox(this)">
-            <img src="images/13.JPG" onclick="openLightbox(this)">
-            <img src="images/14.JPG" onclick="openLightbox(this)">
-            <img src="images/15.JPG" onclick="openLightbox(this)">
-            <img src="images/16.JPG" onclick="openLightbox(this)">
-            <img src="images/24.JPG" onclick="openLightbox(this)">
-            <img src="images/18.JPG" onclick="openLightbox(this)">
-            <img src="images/19.JPG" onclick="openLightbox(this)">
-            <img src="images/20.JPG" onclick="openLightbox(this)">
-            <!-- <img src="images/photo6.jpg" onclick="openLightbox(this)"> -->
+        <div class="gallery-grid gallery">
+            <img src="images/30.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/2.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/3.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/4.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/5.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/6.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/7.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/20.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+
         </div>
     </section>
+    <a href="gallery.html" class="load-more btn">មើលបន្ថែមទៀត</a>
 
     <div id="lightbox" onclick="closeLightbox()">
         <span class="close">&times;</span>
@@ -98,7 +87,7 @@
         <h1 class="moul" style="font-size: 1.6rem;">កូនកំលោះ និង កូនក្រមុំ</h1>
         <div class="couple-container">
             <div class="card">
-                <img src="./images/male2.JPG">
+                <img src="./images/male2.jpg">
                 <h4>ដួង ច័ន្ទដារ៉ា</h4>
                 <p style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
                     កូនកូនកំលោះ</p>
@@ -107,7 +96,7 @@
                 <img src="./images/heart1.gif" alt="">
             </div>
             <div class="card">
-                <img src="./images/female2.JPG">
+                <img src="./images/female2.jpg">
                 <h4>ប៉ាន់ គឹមជូ</h4>
                 <p style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px;">
                     កូនក្រមុំ</p>
@@ -118,7 +107,6 @@
     <!-- DETAILS -->
     <section class="details hidden" id="details">
         <h3 class="moul">មានកិត្តិយសសូមគោរពអញ្ជើញ</h3>
-
         <p>
             ឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាង កញ្ញា និង ប្រិយមិត្ត អញ្ជើញចូលរួមជាអធិបតី និង ជាភ្ញៀវកិត្តិយស
             ដើម្បីប្រសិទ្ធពរជ័យសិរីសួស្តី ជ័យ មង្គលក្នុង ពិធីរៀបអាពាហ៍ពិពាហ៍ កូនប្រុស-ស្រី របស់យើងខ្ញុំ <br><br>
@@ -130,19 +118,78 @@
     </section>
 
     <section class="map hidden">
-        <h3 class="moul" style="text-align: center;">ទីតាំង</h3>
+        <h3 class="moul" style="text-align: center;">
+            <ion-icon name="location-outline"></ion-icon> ទីតាំង
+        </h3>
         <div class="qr-code-location">
             <h4>ស្កេន QR Code ដើម្បីមើលទីតាំង</h4>
             <div class="qr">
                 <img src="images/location.png" class="qr-code" alt="QR Code Location">
-                <a href="https://maps.app.goo.gl/Hs1tA7cowWSPE6BP9">ចុចដើម្បីទៅកាន់ទីតាំងកម្មវិធី</a>
+                <a class="btn" href="https://maps.app.goo.gl/Hs1tA7cowWSPE6BP9">ចុចដើម្បីទៅកាន់ទីតាំងកម្មវិធី</a>
             </div>
         </div>
-
     </section>
 
+    <!-- <section class="payment-section" style="padding: 0;">
+        <div class="payment-bg">
+            <div class="overlay"></div>
+
+            <div class="payment-content">
+                <h3 class="gold">ចំណងដៃ</h3>
+                <p class="subtitle">Scan any QR code to send your gift</p>
+                <div class="payment-btns">
+                    <button class="btn payment-btn">ដុល្លា</button>
+                    <button class="btn payment-btn">រៀល</button>
+                </div>
+
+                <div class="qr-container">
+                    <div class="qr-card">
+                        <img src="images/bank1.jpg" alt="QR Code 2" class="qr-code">
+                        <h4>ដុល្លា</h4>
+                    </div>
+                    <div class="qr-card">
+                        <img src="images/khmerQr.jpg" alt="QR Code 1" class="qr-code">
+                        <h4>រៀល</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="payment-section" style="padding: 0;">
+        <div class="payment-bg">
+            <div class="overlay"></div>
+
+            <div class="payment-content">
+                <h2 class="gold">ចំណងដៃ</h2>
+
+                <!-- QR container -->
+                <div class="qr-container">
+                    <div class="qr-card dollar">
+                        <img src="images/bank1.jpg" alt="QR Dollar" class="qr-code">
+                        <h4>$ ដុល្លា</h4>
+                    </div>
+                    <div class="qr-card riel" style="display:none;">
+                        <img src="images/khmerQr.jpg" alt="QR Riel" class="qr-code">
+                        <h4>៛ រៀល</h4>
+                    </div>
+                    <div class="currency-toggle">
+                        <button class="currency-btn active" onclick="switchCurrency('dollar')">$ ប្រាក់ដុល្លា</button>
+                        <button class="currency-btn" onclick="switchCurrency('riel')">៛ ប្រាក់រៀល</button>
+                    </div>
+                </div>
+                <div class="thank-you-message">
+                    <h3>សូមថ្លែងអំណរអរគុណ</h3>
+                    <p style="width: 600px; margin: auto;">វត្តមានឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា ជាកិត្តិយសដ៏ឧត្តុងឧត្តម ចំពោះគ្រួសាររបស់យើងខ្ញុំ។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <footer>
-        <p>With love ❤️ Chandara & Kimchou</p>
+        <h2 style="font-family: 'Moulpali', sans-serif;">ដួង ច័ន្ទដារ៉ា <span class="love">&</span> ប៉ាន់ គឹមជូ</h2>
     </footer>
 
     <script src="script.js"></script>

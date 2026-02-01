@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chandara & Kimchou Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Moulpali&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2 class="love gold">Chandara & Kimchou</h2>
+
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">ទំព័រដើម</a></li>
+                <li><a href="/gallery.html">កំរងរូបភាព</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="wedding-gallery fade-section">
+        <h3 class="gold"
+            style="font-family: 'Moulpali', sans-serif !important; font-size: 1.2rem; margin-bottom: 20px; margin-top: 50px;">
+            កំរងរូបភាពអាពាហ៍ពិពាហ៍របស់យើង</h3>
+
+        <div class="gallery-grid" id="gallery">
+            <!-- 1–12 visible, rest hidden -->
+            <img src="images/1.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/2.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/3.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/4.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/5.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/6.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/7.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/11.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/12.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+
+            <img src="images/13.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/14.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/15.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/16.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/18.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/20.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/21.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/22.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/28.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/29.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/30.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/32.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/33.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/34.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/35.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/36.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/37.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/38.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/39.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/10.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/19.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/23.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/24.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/25.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/27.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/26.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+            <img src="images/9.jpg" loading="lazy" class="fade-item" onclick="openLightbox(this)">
+
+            <img src="images/8.jpg" loading="lazy" class="fade-item">
+        </div>
+
+        <a href="index.html" class="btn back-home">ត្រឡប់ទៅទំព័រដើម</a>
+    </section>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <script src="./script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

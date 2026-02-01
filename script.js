@@ -51,3 +51,37 @@ function openLightbox(img) {
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+
+const section = document.querySelector('.fade-section');
+const items = document.querySelectorAll('.fade-item');
+
+const obs = new IntersectionObserver(
+(entries) => {
+    if (entries[0].isIntersecting) {
+    section.classList.add('visible');
+
+    items.forEach((item, index) => {
+        setTimeout(() => {
+        item.classList.add('visible');
+        }, index * 120); // soft stagger
+    });
+
+    obs.disconnect();
+    }
+},
+{ threshold: 0.2 }
+);
+
+obs.observe(section);
+
+function switchCurrency(currency) {
+  // Hide all
+  document.querySelectorAll('.qr-card').forEach(card => card.style.display = 'none');
+  
+  // Show selected
+  document.querySelectorAll(`.qr-card.${currency}`).forEach(card => card.style.display = 'block');
+  
+  // Update active button
+  document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.currency-btn[onclick="switchCurrency('${currency}')"]`).classList.add('active');
+}
