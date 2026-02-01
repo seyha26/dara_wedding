@@ -702,6 +702,28 @@ footer {
     } 
 }
 
+@media (max-width: 1080px) {
+    .payment-content{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .qr-container {
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 666px) {
+    .thank-you-message p {
+        max-width: 400px !important;
+    }
+}
+
 
 @media (max-width: 430px) {
     .hero h2 {
@@ -727,23 +749,6 @@ footer {
 }
 
 @media (max-width: 390px) {
-    .hero h2 {
-        font-size: 3.2rem;
-        margin-top: 50px;
-    }
-
-    .hero-para p {
-        font-size: 1rem;
-    }
-
-    .details h3 {
-        font-size: 1.4rem;
-    }
-
-    .details p {
-        font-size: 1rem;
-    }
-
     .thank-you-message p {
         max-width: 300px !important;
     }
