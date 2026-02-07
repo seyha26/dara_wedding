@@ -85,3 +85,7 @@ function switchCurrency(currency) {
   document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
   document.querySelector(`.currency-btn[onclick="switchCurrency('${currency}')"]`).classList.add('active');
 }
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
