@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
 @font-face {
     font-family: 'KhmerM1';
     src: url('./fonts/khmer\ M1.volt.ttf') format('truetype');
