@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden;">
     <div class="modal" id="modal">
         <div class="modal-content">
             <img class="top-flower" src="./images/top-flower.png" alt="">
@@ -31,7 +31,7 @@
                 <h4 style="font-family: KhmerM1; color: #ffdb65">សូមគោរពអញ្ជើញ</h4>
                 <div>
                     <img class="frame" src="./images/frame1.png" alt="">
-                    <h3 style="color: #fff; font-family: KhmerM1;">លោក ទេព សត្យា</h3>
+                    <h3 id="cs_name" style="color: #fff; font-family: KhmerM1;">ឈ្មោះ ភ្ញៀវ</h3>
                 </div>
                 <button class="btn-front" style="z-index: 1000000;" onclick="closeModal()">ចុចដើម្បីទៅទំព័រដើម</button>
             </div>
@@ -44,11 +44,11 @@
 
     <header>
         <nav class="navbar">
-            <h2 class="love gold">Chandara & Kimchou</h2>
+            <h2 class="love gold" onclick="goTo('index.html')"">Chandara & Kimchou</h2>
             <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">ទំព័រដើម</a></li>
-                <li><a href="gallery.html">កំរងរូបភាព</a></li>
+                <li><a onclick="goTo('index.html')">ទំព័រដើម</a></li>
+                <li><a onclick="goTo('gallery.html')">កំរងរូបភាព</a></li>
             </ul>
         </nav>
     </header>
@@ -125,7 +125,7 @@
 
         </div>
     </section>
-    <a href="gallery.html" class="load-more btn">មើលបន្ថែមទៀត</a>
+    <a onclick="goTo('gallery.html')" class="load-more btn">មើលបន្ថែមទៀត</a>
 
     <!-- DETAILS -->
     <section class="details hidden" id="details">
@@ -139,6 +139,58 @@
             (ចូលតាមផ្លូវសាលាបឋមសិក្សាកែវក្រសួង ចំងាយ 500m)
         </p>
     </section>
+
+    <div section-scroll="3" class="wd_scroll_wrap">
+        <div class="wd_program_wrapper wd_toppadder90 wd_bottompadder90">
+            <div class="container" style="max-width: 1300px; margin: auto; text-align: left;">
+                <div class="row"  style="width: 100%; margin: auto;">
+                    <div class="col-lg-12">
+                        <div class="wd_heading wow fadeInDown" data-wow-delay="0.3s">
+                            <h4>កម្មវិធីរៀបអាពាហ៍ពិពាហ៍</h4>
+                            <h1>ដូង ច័ន្ទដារ៉ា &amp; បាន គឹមជូ</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" style="width: 100%; margin: auto;">
+                        <div class="wd_program_covers">
+                            <div class="wd_program_line"></div>
+
+                            <!-- Day 1 -->
+                            <div class="wd_program_box_left">
+                                <div class="wd_program_dot"><span></span></div>
+                                <div class="wd_program_box_datails">
+                                    <span>ថ្ងៃសុក្រ ទី ២៧ ខែកុម្ភៈ ២០២៦</span>
+                                    <h1>កម្មវិធីថ្ងៃទី១</h1>
+                                    <p>ម៉ោង ២:៣០ នាទីរសៀល : ពិធីសែនក្រុងពលី</p>
+                                    <p>ម៉ោង ៣:៣០ នាទីរសៀល : ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</p>
+                                    <p>ម៉ោង ៤:៣០ នាទីល្ងាច : អញ្ជើញភ្ញៀវកិត្តិយសពិសាភោជនាហារ</p>
+                                    <p>ម៉ោង ៥:៣០ នាទីល្ងាច : ពិធីជាវខាន់ស្លា</p>
+                                </div>
+                            </div>
+
+                            <!-- Day 2 -->
+                            <div class="wd_program_box_right">
+                                <div class="wd_program_dot"><span></span></div>
+                                <div class="wd_program_box_datails">
+                                    <span>ថ្ងៃសៅរ៍ ទី ២៨ ខែកុម្ភៈ ២០២៦</span>
+                                    <h1>កម្មវិធីថ្ងៃទី២</h1>
+                                    <p>ម៉ោង ៦:៣០ នាទីព្រឹក : ជួបជុំសាច់ញាតិ និងភ្ញៀវកិត្តិយស</p>
+                                    <p>ម៉ោង ៧:៣០ នាទីព្រឹក : ពិធីជូនផ្កាស្លា និងរៀបរាប់ផ្លែឈើ</p>
+                                    <p>ម៉ោង ៨:០០ នាទីព្រឹក : ពិធីពិសាស្លាកំណត់</p>
+                                    <p>ម៉ោង ៨:៣០ នាទីព្រឹក : ពិធីបំពាក់ចិញ្ចៀន</p>
+                                    <p>ម៉ោង ៩:៣០ នាទីព្រឹក : ពិធីកាត់សក់បង្កក់សិរី</p>
+                                    <p>ម៉ោង ១១:០០ នាទីថ្ងៃត្រង់ : ពិធីសែនចងដៃ បង្វិលពពិល និងសំពះផ្ទឹម</p>
+                                    <p>ម៉ោង ១១:៤០ នាទីថ្ងៃត្រង់ : អញ្ជើញភ្ញៀវកិត្តិយសពិសាភោជនាហារ</p>
+                                    <p>ម៉ោង ៥:០០ ល្ងាច : អញ្ជើញភ្ញៀវកិត្តិយសពិសាភោជនាហារ។ សូមអរគុណ!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <section class="map hidden">
         <h3 class="moul" style="text-align: center;">
@@ -177,7 +229,8 @@
                 </div>
                 <div class="thank-you-message">
                     <h3>សូមថ្លែងអំណរអរគុណ</h3>
-                    <p style="width: 600px; margin: auto;">វត្តមានឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា ជាកិត្តិយសដ៏ឧត្តុងឧត្តម ចំពោះគ្រួសាររបស់យើងខ្ញុំ។</p>
+                    <p style="width: 600px; margin: auto;">វត្តមានឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា
+                        ជាកិត្តិយសដ៏ឧត្តុងឧត្តម ចំពោះគ្រួសាររបស់យើងខ្ញុំ។</p>
                 </div>
             </div>
         </div>

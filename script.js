@@ -1,3 +1,27 @@
+const name_customer= {
+  "makara": "លោកស្រី មាស មករា និង​ ស្វាមី",
+  "lek": "លោក ផាត់ លិក និង ភរិយា",
+  "tola": "លោក អាន តុលា និង ភរិយា",
+  "houn": "លោក សេង ហួន និង ភរិយា",
+  "vannak": "លោក ក្រោន វណ្ណះ និង ភរិយា",
+  "vichey": "លោក​ វ៉ែន វិជ័យ្យ និង ស្រីណាក់",
+  "manut": "លោក ឃួន ម៉ានុត និង ភរិយា",
+  "thoeun": "លោក ជុន ចាន់ធឿន និង​ ហានី",
+  "rey": "លោក សេង រី និង​ សង្សារ",
+  "khun": "កញ្ញា ង៉ែត ​សុខុន​ និង សង្សារ",
+  "mina": "កញ្ញា ហ៊ុំ សៀសុមិនា​ និង សង្សារ",
+  "sreyneang": "លោកស្រី យាំ ស្រីនាង",
+  "chiva": "កញ្ញា វូន ជីវ៉ា និង​ សង្សារ"
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
+
+if (name && name_customer[name]) {
+  document.getElementById('cs_name').innerText = name_customer[name];
+}
+
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -6,7 +30,7 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
@@ -86,6 +110,36 @@ function switchCurrency(currency) {
   document.querySelector(`.currency-btn[onclick="switchCurrency('${currency}')"]`).classList.add('active');
 }
 
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
+function goTo(page) {
+  if (name) {
+    window.location.href = `${page}?name=${encodeURIComponent(name)}`;
+  } else {
+    window.location.href = page;
+  }
 }
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.add('closing');
+
+    // remove modal after animation ends
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = "auto"; 
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        document.querySelector('header').style.opacity = 1;
+        document.querySelector('header').style.transform = 'scale(1)';
+
+        document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+        
+    }, 200); // must match CSS transition duration
+}
+
+  setTimeout(() => {
+    document.body.style.display = 'block';
+    document.getElementById("modal").style.opacity = 1;
+}, 50); 
