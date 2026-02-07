@@ -24,7 +24,6 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    /* background: white; */
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
     z-index: 1000;
@@ -83,7 +82,70 @@ footer p{
     display: flex;
     flex-direction: column;
     position: relative;
-    /* justify-content: center; */
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-image: url(./images/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 15% auto;
+    padding:200px 20px 50px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Classes to show the elements using JavaScript */
+.close-modal {
+    display: none;
 }
 
 .hero h2 {
@@ -175,7 +237,7 @@ section {
     height: 600px;
     padding: 20px;
     border-radius: 20px;
-    /* box-shadow: 0 15px 30px rgba(0,0,0,.1); */
+   
     transition: transform .4s;
 }
 
@@ -194,12 +256,12 @@ section {
 }
 
 .card img {
-    /* width: 100%; */
+   
     height: 480px;
     object-fit: cover;
     border-radius: 15px;
-    object-fit: cover;      /* prevents stretching */
-    border-radius: 50%;     /* circle portrait (wedding style) */
+    object-fit: cover;     
+    border-radius: 50%;    
     image-rendering: auto; 
 }
 
@@ -412,21 +474,15 @@ footer {
 }
 
 .qr-code {
-  width: 140px;      /* adjust here */
-  height: auto;      /* keep ratio */
+  width: 140px;     
+  height: auto;     
   max-width: 100%;
 }
-
-/* .map .container div {
-    flex: 1;
-    width: 100%;
-} */
 
 .map-container {
     width: 100%;
     max-width: 700px;
     margin: 20px auto;
-    /* border-radius: 15px; */
     overflow: hidden;
 }
 
@@ -534,7 +590,7 @@ footer {
   display: flex;
   justify-content: end;
   gap: 40px;
-  flex-wrap: wrap; /* stack on mobile */
+  flex-wrap: wrap;
   margin-right: 400px;
 }
 
@@ -566,7 +622,7 @@ footer {
         display: flex;
         justify-content: end;
         gap: 40px;
-        flex-wrap: wrap; /* stack on mobile */
+        flex-wrap: wrap;
         margin-right: 200px;
     }
 }
@@ -576,7 +632,7 @@ footer {
         display: flex;
         justify-content: end;
         gap: 40px;
-        flex-wrap: wrap; /* stack on mobile */
+        flex-wrap: wrap;
         margin-right: 100px;
     }
 }
@@ -586,7 +642,7 @@ footer {
         display: flex;
         justify-content: end;
         gap: 40px;
-        flex-wrap: wrap; /* stack on mobile */
+        flex-wrap: wrap;
         margin-right: 50px;
     }
 }
@@ -596,7 +652,7 @@ footer {
         display: flex;
         justify-content: end;
         gap: 40px;
-        flex-wrap: wrap; /* stack on mobile */
+        flex-wrap: wrap;
         margin-right: 0;
     }
 }
@@ -650,44 +706,90 @@ footer {
         max-width: 400px;
     }
 }
-/* 
-.btn.front-page {
-    position: absolute;
-} */
 
 .frame-name {
     position: relative;
     width: 100%;
+    height: 100px;
+}
+
+.frame-name img {
+    display: absolute;
+    /* top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%); */
 }
 
 .frame-name h2 {
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.first-page {
-    background-image: url("./images/background.jpeg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-
 .frame {
-    /* position: absolute; */
-    /* bottom: 50%;
-    left: 50%; */
     width: 100%;
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     text-align: center;
+}
+
+.frame-name {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.frame-name > div {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Frame image behind text */
+.frame-name .frame {
+    width: 320px;              /* adjust to your frame */
+    height: auto;
+    display: block;
+    position: absolute;
+}
+
+/* Name on top of frame */
+.frame-name h2 {
+    position: absolute;
+    margin: 0;
+    font-size: 26px;
+    color: #000;
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Button under frame */
+.front-page {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #b38b2d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.f-content {
+    max-height: 400px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.f-content h1{
+    font-family: 'Moulpali', sans-serif;
 }
 
 
