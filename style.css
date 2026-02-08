@@ -949,7 +949,7 @@ footer {
 
 .modal-content .btn-front {
     background-color: transparent !important;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin-top: 20px;
     border: 1px solid #fff;
     z-index: 10000; 
@@ -1088,6 +1088,26 @@ footer {
     .wd_program_box_left,
     .wd_program_box_right {
         min-width: 230px;
+    }
+}
+
+.btn-front {
+    animation: floatBtn 2.5s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes floatBtn {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 rgba(0, 1, 2, 0.4);
+    }
+    50% {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(12, 44, 85, 0.5);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 rgba(12, 44, 85, 0.4);
     }
 }
 
