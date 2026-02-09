@@ -79,6 +79,10 @@ if (name && name_customer[name]) {
   document.getElementById('cs_name').innerText = name_customer[name];
 }
 
+if (name == 'chunly') {
+  document.getElementById('cs_name').style.fontSize = '0.8rem';
+}
+
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
